@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าหลัก - จังหวัดของคุณ</title>
+    <style>
+        /* สไตล์พื้นฐาน */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: url('your-background-image.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .card {
+            background: #f4f4f4;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ส่วนบน -->
+<header>
+    <h1>ยินดีต้อนรับสู่จังหวัดของคุณ</h1>
+    <p>สัมผัสความงดงามของธรรมชาติและวัฒนธรรม</p>
+</header>
+
+<!-- เมนูนำทาง -->
+<nav>
+    <a href="#">หน้าหลัก</a>
+    <a href="#">สถานที่ท่องเที่ยว</a>
+    <a href="#">กิจกรรมและเทศกาล</a>
+    <a href="#">การเดินทาง</a>
+    <a href="#">ติดต่อเรา</a>
+</nav>
+
+<!-- เนื้อหาหลัก -->
+<div class="container">
+    <!-- ภาพรวมของจังหวัด -->
+    <section>
+        <h2>ภาพรวมของจังหวัด</h2>
+        <p>จังหวัดของคุณเป็นแหล่งท่องเที่ยวที่มีชื่อเสียง มีสถานที่สวยงามและอาหารพื้นเมืองที่อร่อย</p>
+        <img src="overview-image.jpg" alt="ภาพรวมของจังหวัด" style="width:100%; border-radius: 10px;">
+    </section>
+
+    <!-- ไฮไลท์สถานที่ท่องเที่ยว -->
+    <section>
+        <h2>ไฮไลท์สถานที่ท่องเที่ยว</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="place1.jpg" alt="สถานที่ 1">
+                <h3>สถานที่ 1</h3>
+                <p>คำอธิบายสถานที่แบบสั้น</p>
+                <a href="#">ดูเพิ่มเติม</a>
+            </div>
+            <div class="card">
+                <img src="place2.jpg" alt="สถานที่ 2">
+                <h3>สถานที่ 2</h3>
+                <p>คำอธิบายสถานที่แบบสั้น</p>
+                <a href="#">ดูเพิ่มเติม</a>
+            </div>
+            <div class="card">
+                <img src="place3.jpg" alt="สถานที่ 3">
+                <h3>สถานที่ 3</h3>
+                <p>คำอธิบายสถานที่แบบสั้น</p>
+                <a href="#">ดูเพิ่มเติม</a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- ส่วนท้าย -->
+<footer class="footer">
+    <p>แนะนำสถานที่ท่องเที่ยวจังหวัดสมุทรปราการ</p>
+</footer>
+
+</body>
+</html>
