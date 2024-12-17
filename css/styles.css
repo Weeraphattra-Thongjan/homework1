@@ -1,0 +1,87 @@
+/* สไตล์พื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: url('images/หน้าปก.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    background: #575757;
+    border-radius: 5px;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+section {
+    margin: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* การจัดการ Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* การ์ดสถานที่ */
+.card {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ส่วนท้าย */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
