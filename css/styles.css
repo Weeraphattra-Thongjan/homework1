@@ -8,8 +8,9 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #151414;
 }
+
 
 /* Hero Section (รูปหน้าปก) */
 .hero {
@@ -25,6 +26,8 @@ body {
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    height: 100vh; /* เพิ่มความสูงให้เต็มหน้าจอ */
+    width: 100%;   /* ให้ความกว้างเต็มจอ */
 }
 
 
@@ -55,19 +58,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 50px;
+    background: rgba(53, 61, 122, 0.6);
     z-index: 10;
 }
 
 .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
+    font-size: 2rem;
+    font-weight: 1000;
+    color: rgb(255, 255, 255);
 }
 
 .nav-links a {
-    color: white;
+    font-size: 1.3rem;
+    font-weight: 1000;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin: 0 10px;
     transition: color 0.3s ease;
@@ -75,7 +80,7 @@ body {
 
 /* ตรงหน้าหลักสถานที่ท่องเที่ยวติดต่อ*/
 .nav-links a:hover {
-    color: #ffdb70; /* เปลี่ยนสีเมื่อ Hover */
+    color: #030a3b; /* เปลี่ยนสีเมื่อ Hover */
 }
 
 
@@ -102,12 +107,12 @@ body {
 }
 
 .card {
-    background: linear-gradient(to bottom, #ff7b29, #ffa547);
+    background: linear-gradient(to bottom, #333ce3, #130b65);
     color: white;
     width: 250px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 2, 14, 0.6);
     transition: transform 0.3s ease;
 }
 
@@ -135,7 +140,7 @@ body {
 
 /* Footer */
 footer {
-    background: #333;
+    background: rgba(53, 61, 122, 0.6);
     color: white;
     text-align: center;
     padding: 10px 0;
