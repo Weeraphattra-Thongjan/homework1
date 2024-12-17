@@ -3,153 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าหลัก - จังหวัดของคุณ</title>
-    <style>
-        /* สไตล์พื้นฐาน */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background: url('your-background-image.jpg') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 50px 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #333;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-        }
-        nav a:hover {
-            background: #575757;
-            border-radius: 5px;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .card {
-            background: #f4f4f4;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .card img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-    </style>
+    <title>แนะนำสถานที่ท่องเที่ยวจังหวัดสมุทรปราการ</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-<!-- ส่วนบน -->
-<header>
-    <h1>ยินดีต้อนรับสู่จังหวัดของคุณ</h1>
-    <p>สัมผัสความงดงามของธรรมชาติและวัฒนธรรม</p>
-</header>
-
-<!-- เมนูนำทาง -->
-<nav>
-    <a href="#">หน้าหลัก</a>
-    <a href="#">สถานที่ท่องเที่ยว</a>
-    <a href="#">ติดต่อเรา</a>
-</nav>
-
-<!-- เนื้อหาหลัก -->
-<div class="container">
-    <!-- ภาพรวมของจังหวัด -->
-    <section>
-        <h2>ภาพรวมของจังหวัด</h2>
-        <p>จังหวัดของคุณเป็นแหล่งท่องเที่ยวที่มีชื่อเสียง มีสถานที่สวยงามและอาหารพื้นเมืองที่อร่อย</p>
-        <img src="images/หน้าปก.jpg" alt="ภาพรวมของจังหวัด" style="width:100%; border-radius: 10px;">
-    </section>
-
-    <!-- ไฮไลท์สถานที่ท่องเที่ยว -->
-    <section>
-        <h2>ไฮไลท์สถานที่ท่องเที่ยว</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">
-                    <h3>พิพิธภัณฑ์ช้างเอราวัณ</h3>
-                </div>
-                <div class="card-body">
-                    <img src="images/ช้างเอราวัณ.jpg" alt="พิพิธภัณฑ์ช้างเอราวัณ">
-                </div>
+    <!-- ส่วนบนของเว็บ -->
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">สถานที่ท่องเที่ยว</div>
+            <div class="nav-links">
+                <a href="#">หน้าหลัก</a>
+                <a href="#">สถานที่ท่องเที่ยว</a>
+                <a href="#">ติดต่อเรา</a>
             </div>
+        </nav>
+        <div class="hero-image"></div>
+        <div class="hero-content">
+            <h1>ยินดีต้อนรับสู่จังหวัดสมุทรปราการ</h1>
+        </div>
+    </header>
 
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">
-                    <h3>พิพิธภัณฑ์ปลากัดไทย</h3>
-                </div>
-                <div class="card-body">
-                    <img src="images/ปลากัด.jpg" alt="พิพิธภัณฑ์ปลากัดไทย">
-                </div>
-            </div>
+    <!-- เนื้อหาหลัก -->
+    <main>
+        <!-- ภาพรวมของจังหวัด -->
+        <section class="overview">
+            <img src="images/หน้าปก.jpg" alt="ภาพรวมจังหวัดสมุทรปราการ">
+            <h2>ภาพรวมของจังหวัด</h2>
+            <p>จังหวัดสมุทรปราการเป็นแหล่งท่องเที่ยวที่มีชื่อเสียง มีสถานที่สวยงามและอาหารพื้นเมืองที่อร่อย</p>
+        </section>
 
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">
-                    <h3>วัดพระสมุทรเจดีย์</h3>
-                </div>
-                <div class="card-body">
-                    <img src="images/เจดีย์.jpg" alt="วัดพระสมุทรเจดีย์">
-                </div>
-            </div>
+        <!-- ไฮไลท์สถานที่ท่องเที่ยว -->
+        <section class="card-container">
+            <article class="card">
+                <img src="images/ช้างเอราวัณ.jpg" alt="พิพิธภัณฑ์ช้างเอราวัณ">
+                <h2>พิพิธภัณฑ์ช้างเอราวัณ</h2>
+                <p>พิพิธภัณฑ์ที่มีรูปปั้นช้างขนาดใหญ่ เป็นแหล่งเรียนรู้ศิลปะและวัฒนธรรม</p>
+            </article>
+            <article class="card">
+                <img src="images/ปลากัด.jpg" alt="พิพิธภัณฑ์ปลากัดไทย">
+                <h2>พิพิธภัณฑ์ปลากัดไทย</h2>
+                <p>แหล่งรวบรวมสายพันธุ์ปลากัดและความรู้เกี่ยวกับการเพาะเลี้ยง</p>
+            </article>
+            <article class="card">
+                <img src="images/เจดีย์.jpg" alt="วัดพระสมุทรเจดีย์">
+                <h2>วัดพระสมุทรเจดีย์</h2>
+                <p>วัดเก่าแก่ริมแม่น้ำเจ้าพระยาที่มีความสำคัญทางประวัติศาสตร์</p>
+            </article>
+            <article class="card">
+                <img src="images/จอมเกล้า.jpg" alt="ป้อมพระจุลจอมเกล้า">
+                <h2>ป้อมพระจุลจอมเกล้า</h2>
+                <p>ป้อมปราการเก่าแก่ที่สร้างขึ้นในสมัยรัชกาลที่ 5</p>
+            </article>
+            <article class="card">
+                <img src="images/ตลาด.jpg" alt="ตลาดโบราณบางพลี">
+                <h2>ตลาดโบราณบางพลี</h2>
+                <p>ตลาดเก่าแก่อายุกว่า 100 ปี ที่เต็มไปด้วยอาหารและของพื้นเมือง</p>
+            </article>
+        </section>
+    </main>
 
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">
-                    <h3>ป้อมพระจุลจอมเกล้า</h3>
-                </div>
-                <div class="card-body">
-                    <img src="images/จอมเกล้า.jpg" alt="ป้อมพระจุลจอมเกล้า">
-                </div>
-            </div>
-
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">
-                    <h3>ตลาดโบราณบางพลี</h3>
-                </div>
-                <div class="card-body">
-                    <img src="images/ตลาด.jpg" alt="ตลาดโบราณบางพลี">
-                </div>
-            </div>
-           
-    </section>
-
-</div>
-
-<!-- ส่วนท้าย -->
-<footer class="footer">
-    <p>แนะนำสถานที่ท่องเที่ยวจังหวัดสมุทรปราการ</p>
-</footer>
-
+    <!-- ส่วนท้าย -->
+    <footer>
+        <p>&copy; 2024 แนะนำสถานที่ท่องเที่ยวจังหวัดสมุทรปราการ</p>
+    </footer>
 </body>
 </html>
