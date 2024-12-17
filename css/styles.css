@@ -1,83 +1,139 @@
-/* สไตล์พื้นฐาน */
-body {
-    font-family: Arial, sans-serif;
+/* รีเซ็ตสไตล์เริ่มต้น */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-}
-
-header {
-    background: url('images/หน้าปก.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    background: #333;
-    padding: 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-}
-
-nav a:hover {
-    background: #575757;
-    border-radius: 5px;
-}
-
-main {
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-}
-
-section {
-    margin: 20px 0;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
     color: #333;
 }
 
-/* การจัดการ Grid */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+/* Hero Section (รูปหน้าปก) */
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(20, 19, 19);
+    background-image: url('images/หน้าปก.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
 }
 
-/* การ์ดสถานที่ */
-.card {
-    background: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 150px 20px 0.5%; 
+    width: 100;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+/* ตรงหน้าหลักสถานที่ท่องเที่ยวติดต่อ*/
+.nav-links a:hover {
+    color: #ffdb70; /* เปลี่ยนสีเมื่อ Hover */
+}
+
+
+/* ภาพรวม */
+.overview {
     text-align: center;
+    padding: 40px 20px;
+}
+
+.overview img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* การ์ดสถานที่ท่องเที่ยว */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background: linear-gradient(to bottom, #ff7b29, #ffa547);
+    color: white;
+    width: 250px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 150px;
+    object-fit: cover;
 }
 
-.card-header {
-    background-color: #f8f9fa;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+.card h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
-/* ส่วนท้าย */
+.card p {
+    font-size: 0.9rem;
+    padding: 0 10px 10px;
+    text-align: center;
+}
+
+/* Footer */
 footer {
     background: #333;
     color: white;
