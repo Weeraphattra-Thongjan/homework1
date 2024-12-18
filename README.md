@@ -1,1 +1,105 @@
 # homework1
+- git config --global user.name "weeraphattra"
+- git config --global user.email "66160031@go.buu.ac.th"
+- git clone https://github.com/Weeraphattra-Thongjan/homework1.git
+- git add .
+- git add .
+- git commit -m "init project"
+- git push
+- git checkout -b feature/main
+- git add .
+- git commit -m "create main page"
+- git add .
+- git commit -m "create main page1"
+- git add .
+- git commit -m "addimages"
+- git add .
+- git commit -m "editimages"
+- git checkout -b feature/css
+- git add css/styles.css
+- git commit -m "test"
+- git add css\styles.css
+- git commit -m "แก้หัว"
+- git add index.html
+- git commit "main2"
+- git commit -m "create main page2"
+- git add index.html
+- git commit -m "create main page3"
+- git add css\styles.css
+- git commit -m "finish 1"
+- git checkout -b feature/tourist
+- git add tourist.html
+- git commit -m "tourist1"
+- git add tourist.html
+- git commit -m "tourist2"
+- git add css\styles.css
+- git commit -m "add animation"
+- git add tourist.html
+- git commit -m "tourist3"
+- git add .\index.html
+- git commit -m "create main page4"
+- git checkout -b feature/contact
+- git add .\contact.html
+- git commit -m "contact1"
+- git checkout -b develop/web
+- git status
+- git -help
+- git --help
+- git show
+- git add tourist.html
+- git commit -m "tourist4"
+- git add .\contact.html
+- git commit -m "contact2"
+- git add .\contact.html
+- git commit -m "contact2"
+- git add .\index.html
+- git commit -m "create main page5"
+- git add .\css\styles.css
+- git commit -m "add flexbox"
+- git checkout -b feature/js
+- git add .\js\script.js
+- git commit -m "js1"
+- git add .\css\styles.css
+- git commit -m "add burger"
+- git add .\js\script.js
+- git commit -m "js2"
+- git commit -m "j2"
+- git add .\tourist.html
+- git commit -m "tourist5"
+- git --help
+- switch...
+- git switch
+- git checkout main
+- git add .\index.html
+- git commit -m "create main page6"
+- git checkout main
+- origin/main
+- git status
+- git add .\images\
+- git commit -m "รูป"
+- git checkout main
+- git checkout -
+- git reflog
+- git checkout feature/css
+- git add .\css\styles.css
+- git commit -m "final style"
+- git checkout develop
+- git checkout feature/js
+- git rm js/script.js
+- git add .\js\script.js
+- git commit -m "final script"
+- git checkout feature/contact
+- gi
+- git add .\contact.html
+- git commit -m "final comtact"
+- git checkot feature/contact
+- git checkout feature/contact
+- git checkout  feature/tourist
+- git add .\tourist.html
+- git commit -m "final tourist"
+- git checkout main
+- git checkout  develop/web
+- git add .\index.html
+- git commit -m "final index"
+- git checkout main
+- git merge develop
