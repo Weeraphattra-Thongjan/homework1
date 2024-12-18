@@ -6,26 +6,78 @@
     <title>ฟอร์มติดต่อ</title>
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="logo">สถานที่ท่องเที่ยว</div>
-        <nav class="nav-links">
-            <a href="index.html">หน้าหลัก</a>
-            <a href="#tourist-places">สถานที่ท่องเที่ยว</a>
-            <a href="formcontact">ติดต่อเรา</a>
-        </nav>
-    </header> 
-
     <style>
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(53, 61, 122, 0.9);
+            padding: 10px 20px;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: normal;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: rgba(53, 61, 122, 0.9);
+                padding: 10px;
+                border-radius: 8px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        /* Contact Form Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 400px;
+            padding: 0;
+            height: 100vh;
+            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
         }
 
         .contact-form {
@@ -35,6 +87,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 500px;
+            margin: 0;
         }
 
         .contact-form h2 {
@@ -79,6 +132,22 @@
 </head>
 <body>
 
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">สถานที่ท่องเที่ยว</div>
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">หน้าหลัก</a>
+            <a href="#tourist-places">สถานที่ท่องเที่ยว</a>
+            <a href="formcontact">ติดต่อเรา</a>
+        </nav>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Contact Form -->
     <form class="contact-form" action="submit_form.php" method="POST">
         <h2>ฟอร์มติดต่อ</h2>
 
@@ -107,5 +176,12 @@
         </div>
     </form>
 
+    <script>
+        // Toggle Hamburger Menu
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
