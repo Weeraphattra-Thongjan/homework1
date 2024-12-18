@@ -103,3 +103,29 @@
 - git commit -m "final index"
 - git checkout main
 - git merge develop
+- git merge feature/css
+- git checkout feature/css
+- git add .\js\
+- git add .\js\script.js
+- git commit -m "final scrip"
+- git checkout main
+- git merge feature/css
+- git merge feature/css
+- git merge feature/js
+- git merge feature/tourist
+- git status
+- git add .
+- git commit -m "finixh"
+- git merge feature/tourist
+- git merge feature/tourist
+- git merge feature/contact
+- git merge feature/js
+- git merge feature/css
+- git merge develop/web
+- git push origin main
+- history
+- git add .
+- git commit -m "readme"
+- git push
+- git add .
+- git commit -m "last final"
