@@ -46,6 +46,10 @@ body {
     padding: 150px 20px 0.5%; 
     width: 100;
     animation: slideUp 1s ease-out;
+    display: flex; /* ใช้ Flexbox */
+    flex-direction: column; /* จัดเรียงคอนเทนต์ในแนวตั้ง */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    align-items: center; /* จัดให้อยู่กลาง */
 }
 
 /* Animation for Hero Text */
@@ -222,3 +226,26 @@ footer {
         opacity: 1;
     }
 }
+
+
+/* Flexbox Container Styles */ 
+.nav-list { 
+    display: flex; 
+    justify-content: flex-end; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    } 
+    .skills-container { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px; 
+    } 
+    .contact-container { 
+    display: flex; 
+    flex-direction: column; /* จัดเรียงในแนวตั้ง */
+    align-items: center; /* จัดให้อยู่กลาง */
+    gap: 15px; /* ช่องว่างระหว่างแต่ละ element */
+    }
