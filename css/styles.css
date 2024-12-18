@@ -107,6 +107,10 @@ body {
     color: rgb(255, 255, 255);
 }
 
+.nav-links{
+    display: flex;
+}
+
 .nav-links a {
     font-size: 1.3rem;
     font-weight: 1000;
@@ -119,6 +123,23 @@ body {
 /* ตรงหน้าหลักสถานที่ท่องเที่ยวติดต่อ*/
 .nav-links a:hover {
     color: #030a3b;
+}
+/* สไตล์ Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
 }
 
 /* ภาพรวม */
@@ -249,3 +270,61 @@ footer {
     align-items: center; /* จัดให้อยู่กลาง */
     gap: 15px; /* ช่องว่างระหว่างแต่ละ element */
     }
+
+/* สาหรับแท็บเล็ต */ 
+@media (max-width: 768px) { 
+    .gallery { 
+        grid-template-columns: repeat(2, 1fr); 
+    } 
+     
+    .filters { 
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 0.5rem; 
+    } 
+     
+    .filter-btn { 
+        flex: 0 1 calc(50% - 1rem); 
+    } 
+} 
+ 
+/* สาหรับมือถือ */ 
+@media (max-width: 480px) { 
+    .gallery { 
+        grid-template-columns: 1fr; 
+    } 
+     
+    .filter-btn { 
+        flex: 1 1 100%; 
+    } 
+     
+    .header h1 { 
+        font-size: 1.5rem; 
+    } 
+} 
+
+/* เมนูสำหรับมือถือ */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* ซ่อนเมนู */
+        width: 100%;
+        background: rgba(53, 61, 122, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: block; /* แสดงเมนูเมื่อมีการคลิก */
+    }
+
+    .hamburger {
+        display: flex; /* แสดง hamburger menu */
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+}
