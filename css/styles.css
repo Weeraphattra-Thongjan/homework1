@@ -11,7 +11,6 @@ body {
     color: #151414;
 }
 
-
 /* Hero Section (รูปหน้าปก) */
 .hero {
     position: relative;
@@ -26,16 +25,39 @@ body {
     background-position: center;
     background-size: cover;
     overflow: hidden;
-    height: 100vh; /* เพิ่มความสูงให้เต็มหน้าจอ */
-    width: 100%;   /* ให้ความกว้างเต็มจอ */
+    height: 125vh;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Animation for Hero Section */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 .hero-content {
     position: relative;
     z-index: 1;
     padding: 150px 20px 0.5%; 
     width: 100;
+    animation: slideUp 1s ease-out;
+}
+
+/* Animation for Hero Text */
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .hero-content h1 {
@@ -61,6 +83,18 @@ body {
     padding: 15px 50px;
     background: rgba(53, 61, 122, 0.6);
     z-index: 10;
+    opacity: 0;
+    animation: fadeInNavbar 1s ease-in-out forwards;
+}
+
+/* Animation for Navbar */
+@keyframes fadeInNavbar {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .navbar .logo {
@@ -80,14 +114,24 @@ body {
 
 /* ตรงหน้าหลักสถานที่ท่องเที่ยวติดต่อ*/
 .nav-links a:hover {
-    color: #030a3b; /* เปลี่ยนสีเมื่อ Hover */
+    color: #030a3b;
 }
-
 
 /* ภาพรวม */
 .overview {
     text-align: center;
     padding: 40px 20px;
+    animation: fadeInOverview 1.5s ease-in-out;
+}
+
+/* Animation for Overview */
+@keyframes fadeInOverview {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .overview img {
@@ -95,6 +139,12 @@ body {
     max-width: 800px;
     border-radius: 10px;
     margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.overview img:hover {
+    transform: scale(1.05);
 }
 
 /* การ์ดสถานที่ท่องเที่ยว */
@@ -113,11 +163,26 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 2, 14, 0.6);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInCard 0.8s ease-out forwards;
+}
+
+/* Animation for Card */
+@keyframes fadeInCard {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 2, 14, 0.6);
 }
 
 .card img {
@@ -145,4 +210,15 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+    animation: fadeInFooter 1s ease-in-out;
+}
+
+/* Animation for Footer */
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
